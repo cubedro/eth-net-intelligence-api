@@ -1,0 +1,13 @@
+{
+  "name": "eth-netstatsservice",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "debug": "~2.0.0",
+    "ethereum.js": "*",
+    "express.io": "^1.1.13"
+  }
+}
