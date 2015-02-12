@@ -9,8 +9,9 @@
     "debug": "~2.0.0",
     "ethereum.js": "*",
     "express.io": "^1.1.13",
-    "xmlhttprequest": "*",
     "slugs": "^0.1.3",
-    "underscore": "^1.7.0"
+    "socket.io-client": "^1.3.3",
+    "underscore": "^1.7.0",
+    "xmlhttprequest": "*"
   }
 }

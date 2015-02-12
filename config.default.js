@@ -1,7 +1,7 @@
 var config = {
 	name: 'Node',
 	type: 'C++',
-	serverHost: 'localhost',
+	serverHost: 'http://localhost',
 	serverPort: '3000'
 };
 
