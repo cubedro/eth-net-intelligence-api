@@ -1,11 +1,16 @@
 var express = require('express.io');
 var path = require('path');
 var fs = require('fs');
+var config;
 
 var app = express();
 app.http().io();
 
-var config = require('./config');
+if(fs.existsSync('./config.js')){
+    config = require('./config');
+} else {
+    config = require('./config.default');
+}
 
 var node = new require('./lib/node')(config);
 
