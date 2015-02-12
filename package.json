@@ -1,9 +1,11 @@
 {
   "name": "eth-netstatsservice",
+  "description": "Ethereum Network Intelligence API",
   "version": "0.0.1",
   "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
+  "main": "./app.js",
+  "directories": {
+    "lib": "./lib"
   },
   "dependencies": {
     "debug": "~2.0.0",
@@ -12,5 +14,31 @@
     "socket.io-client": "^1.3.3",
     "underscore": "^1.7.0",
     "xmlhttprequest": "*"
-  }
+  },
+  "scripts": {
+    "start": "node ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cubedro/eth-netstatsservice.git"
+  },
+  "homepage": "https://github.com/cubedro/eth-netstatsservice",
+  "bugs": {
+    "url": "https://github.com/cubedro/eth-netstatsservice/issues"
+  },
+  "keywords": [
+    "ethereum",
+    "network",
+    "intelligence",
+    "API"
+  ],
+  "author": "ethdev.com",
+  "authors": [
+    {
+      "name": "Marian Oancea",
+      "email": "marian@ethdev.com",
+      "url": "https://github.com/cubedro"
+    }
+  ],
+  "license": "LGPL-3.0"
 }

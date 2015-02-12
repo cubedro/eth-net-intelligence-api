@@ -1,17 +1,4 @@
-var express = require('express.io');
-var path = require('path');
-var fs = require('fs');
 var nodeModel = require('./lib/node');
-var config;
-
-var app = express();
-app.io();
-
-if(fs.existsSync('./config.js')){
-    config = require('./config');
-} else {
-    config = require('./config.default');
-}
 
 var node = new nodeModel(config);
 
@@ -36,4 +23,4 @@ process.on('SIGTERM', gracefulShutdown);
 process.on('SIGINT', gracefulShutdown);
 
 
-module.exports = app;
+module.exports = node;

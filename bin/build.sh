@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cd ~
+
 # let's install packages
 sudo apt-get update
 sudo apt-get upgrade

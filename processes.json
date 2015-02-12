@@ -2,9 +2,9 @@
 	{
 		"name"				: "eth",
 		"script"			: "./bin/eth",
-		"log_file"			: "/logs/eth-log.log",
-		"out_file"			: "/logs/eth-out.log",
-		"error_file"		: "/logs/eth-err.log",
+		"log_file"			: "/home/ubuntu/logs/eth-log.log",
+		"out_file"			: "/home/ubuntu/logs/eth-out.log",
+		"error_file"		: "/home/ubuntu/logs/eth-err.log",
 		"merge_logs"		: true,
 		"watch"				: false,
 		"exec_interpreter"	: "bash",
@@ -13,9 +13,9 @@
 	{
 		"name"				: "node-app",
 		"script"			: "./app.js",
-		"log_file"			: "/logs/node-app-log.log",
-		"error_file"		: "/logs/node-app-err.log",
-		"out_file"			: "/logs/node-app-out.log",
+		"log_file"			: "/home/ubuntu/logs/node-app-log.log",
+		"out_file"			: "/home/ubuntu/logs/node-app-out.log",
+		"error_file"		: "/home/ubuntu/logs/node-app-err.log",
 		"merge_logs"		: true,
 		"watch"				: false,
 		"exec_interpreter"	: "node",
@@ -26,7 +26,7 @@
 			"RPC_HOST"		: "localhost",
 			"RPC_PORT"		: "8080",
 			"ETH_CLIENT"	: "",
-			"ETH_CLIENT"	: "8080",
+			"ETH_TYPE"		: "C++ 0.8.1",
 			"SOCKET_SERVER"	: "wss://eth-netstats.herokuapp.com/socket.io/",
 		}
 	}
