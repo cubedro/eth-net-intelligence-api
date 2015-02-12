@@ -1,10 +1,11 @@
 var express = require('express.io');
 var path = require('path');
 var fs = require('fs');
+var nodeModel = require('./lib/node');
 var config;
 
 var app = express();
-app.http().io();
+app.io();
 
 if(fs.existsSync('./config.js')){
     config = require('./config');
@@ -12,37 +13,27 @@ if(fs.existsSync('./config.js')){
     config = require('./config.default');
 }
 
-var node = new require('./lib/node')(config);
+var node = new nodeModel(config);
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-});
+console.log(node.stats);
 
-// error handlers
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-    app.use(function(err, req, res, next) {
-        res.status(err.status || 500);
-        res.render('error', {
-            message: err.message,
-            error: err
-        });
-    });
+var gracefulShutdown = function() {
+    console.log("Received kill signal, shutting down gracefully.");
+
+    node.stop();
+    console.log("Closed node watcher");
+
+    setTimeout(function(){
+        console.log("Closed out remaining connections.");
+        process.exit()
+    }, 2*1000);
 }
 
-// production error handler
-// no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-        message: err.message,
-        error: {}
-    });
-});
+// listen for TERM signal .e.g. kill
+process.on('SIGTERM', gracefulShutdown);
+
+// listen for INT signal e.g. Ctrl-C
+process.on('SIGINT', gracefulShutdown);
 
 
 module.exports = app;
