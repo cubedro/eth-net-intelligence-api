@@ -1,5 +1,5 @@
 {
-  "name": "eth-netstatsservice",
+  "name": "eth-net-intelligence-api",
   "description": "Ethereum Network Intelligence API",
   "version": "0.0.1",
   "private": true,
@@ -20,11 +20,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cubedro/eth-netstatsservice.git"
+    "url": "https://github.com/cubedro/eth-net-intelligence-api.git"
   },
-  "homepage": "https://github.com/cubedro/eth-netstatsservice",
+  "homepage": "https://github.com/cubedro/eth-net-intelligence-api",
   "bugs": {
-    "url": "https://github.com/cubedro/eth-netstatsservice/issues"
+    "url": "https://github.com/cubedro/eth-net-intelligence-api/issues"
   },
   "keywords": [
     "ethereum",

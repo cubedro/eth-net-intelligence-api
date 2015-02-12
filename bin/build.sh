@@ -58,7 +58,7 @@ ln -s ~/opt/cpp-ethereum-build/eth/eth ~/bin/eth
 
 # add node service
 cd ~/bin
-[ ! -d "www" ] && git clone https://github.com/cubedro/eth-netstatsservice www
+[ ! -d "www" ] && git clone https://github.com/cubedro/eth-net-intelligence-api www
 cd www
 sudo npm install pm2 -g
 sudo npm install
