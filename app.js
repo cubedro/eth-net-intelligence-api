@@ -1,6 +1,6 @@
 var nodeModel = require('./lib/node');
 
-var node = new nodeModel(config);
+var node = new nodeModel();
 
 console.log(node.stats);
 
