@@ -10,10 +10,11 @@
   "dependencies": {
     "debug": "~2.0.0",
     "ethereum.js": "*",
+    "primus": "^2.4.12",
+    "primus-emit": "^0.1.2",
     "slugs": "^0.1.3",
-    "socket.io-client": "^1.3.3",
     "underscore": "^1.7.0",
-    "xmlhttprequest": "*"
+    "ws": "^0.7.1"
   },
   "scripts": {
     "start": "node ./app.js"
