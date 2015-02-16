@@ -56,6 +56,11 @@ cd ~
 ln -s ~/opt/cpp-ethereum-build/alethzero/alethzero ~/bin/alethzero
 ln -s ~/opt/cpp-ethereum-build/eth/eth ~/bin/eth
 
+# install cloud-utils to fetch instance meta-data
+sudo apt-get -y install cloud-utils
+EC2_INSTANCE_ID=$(ec2metadata --instance-id)
+ETH_VERSION=$(eth -V)
+
 # add node service
 cd ~/bin
 [ ! -d "www" ] && git clone https://github.com/cubedro/eth-net-intelligence-api www
