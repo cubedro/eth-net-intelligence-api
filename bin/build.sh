@@ -35,8 +35,8 @@ cd ethereum
 cd ~/opt
 mkdir cpp-ethereum-build
 cd cpp-ethereum-build
-# cmake ~/ethereum/cpp-ethereum -DCMAKE_BUILD_TYPE=Debug
-cmake ~/ethereum/cpp-ethereum -DHEADLESS=1 -DEVMJIT=1 -DCMAKE_BUILD_TYPE=Debug
+cmake ~/ethereum/cpp-ethereum -DHEADLESS=1 -DCMAKE_BUILD_TYPE=Debug
+# cmake ~/ethereum/cpp-ethereum -DHEADLESS=1 -DEVMJIT=1 -DCMAKE_BUILD_TYPE=Debug
 make -j2
 
 # now let's create bin folder in user's home dir and create symlinks to executables
@@ -49,13 +49,13 @@ sudo apt-get -y install cloud-utils
 # add node service
 cd ~/bin
 
-export EC2_INSTANCE_ID=$(ec2metadata --instance-id)
-export ETH_VERSION=$(./eth -V)
-
 [ ! -d "www" ] && git clone https://github.com/cubedro/eth-net-intelligence-api www
 cd www
 sudo npm install
 sudo npm install pm2 -g
+
+export EC2_INSTANCE_ID=$(ec2metadata --instance-id)
+export ETH_VERSION="$(/home/ubuntu/bin/eth -V)"
 
 # pm2 start processes.json
 # pm2 startup ubuntu
