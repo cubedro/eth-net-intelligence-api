@@ -2,8 +2,6 @@ var nodeModel = require('./lib/node');
 
 var node = new nodeModel();
 
-console.log(node.stats);
-
 var gracefulShutdown = function() {
     console.log("Received kill signal, shutting down gracefully.");
 
