@@ -31,18 +31,6 @@ mkdir logs
 cd ethereum
 [ ! -d "cpp-ethereum" ] && git clone --depth=1 --branch develop https://github.com/ethereum/cpp-ethereum
 
-# download and build ethereum's dependencies
-# cd ~/opt
-# if [ ! -d "cryptopp562" ]; then
-#   mkdir cryptopp562
-#   cd cryptopp562
-#   wget http://www.cryptopp.com/cryptopp562.zip
-#   unzip cryptopp562.zip
-#   CXX="g++ -fPIC" make
-#   make dynamic
-#   sudo make install
-# fi
-
 # build ethereum
 cd ~/opt
 mkdir cpp-ethereum-build
