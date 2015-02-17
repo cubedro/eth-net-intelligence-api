@@ -16,7 +16,7 @@ sudo add-apt-repository -y ppa:ethereum/ethereum-dev
 sudo apt-get -y update
 sudo apt-get -y upgrade
 
-sudo apt-get -y install build-essential g++-4.8 git cmake libboost-all-dev automake unzip libgmp-dev libtool libleveldb-dev yasm libminiupnpc-dev libreadline-dev scons libncurses5-dev libcurl4-openssl-dev wget qtbase5-dev qt5-default qtdeclarative5-dev libqt5webkit5-dev libcryptopp-dev libjson-rpc-cpp-dev libmicrohttpd-dev libjsoncpp-dev libargtable2-dev clang-3.5 lldb-3.5
+sudo apt-get -y install build-essential g++-4.8 git cmake libboost-all-dev automake unzip libgmp-dev libtool libleveldb-dev yasm libminiupnpc-dev libreadline-dev scons libncurses5-dev libcurl4-openssl-dev wget qtbase5-dev qt5-default qtdeclarative5-dev libqt5webkit5-dev libcryptopp-dev libjson-rpc-cpp-dev libmicrohttpd-dev libjsoncpp-dev libargtable2-dev clang-3.5 lldb-3.5 nodejs npm
 
 # add node symlink
 sudo ln -s /usr/bin/nodejs /usr/bin/node
@@ -57,15 +57,16 @@ ln -s ~/opt/cpp-ethereum-build/eth/eth ~/bin/eth
 
 # install cloud-utils to fetch instance meta-data
 sudo apt-get -y install cloud-utils
-export EC2_INSTANCE_ID=$(ec2metadata --instance-id)
-export ETH_VERSION=$(eth -V)
 
 # add node service
 cd ~/bin
 [ ! -d "www" ] && git clone https://github.com/cubedro/eth-net-intelligence-api www
 cd www
-sudo npm install pm2 -g
 sudo npm install
+sudo npm install pm2 -g
+
+export EC2_INSTANCE_ID=$(ec2metadata --instance-id)
+export ETH_VERSION=$(eth -V)
 
 # pm2 start processes.json
 # pm2 startup ubuntu
