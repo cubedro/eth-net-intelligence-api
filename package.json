@@ -13,6 +13,7 @@
     "lodash": "^3.2.0",
     "primus": "^2.4.12",
     "primus-emit": "^0.1.2",
+    "shelljs": "^0.3.0",
     "ws": "^0.7.1"
   },
   "scripts": {
