@@ -58,8 +58,8 @@ ln -s ~/opt/cpp-ethereum-build/eth/eth ~/bin/eth
 
 # install cloud-utils to fetch instance meta-data
 sudo apt-get -y install cloud-utils
-EC2_INSTANCE_ID=$(ec2metadata --instance-id)
-ETH_VERSION=$(eth -V)
+export EC2_INSTANCE_ID=$(ec2metadata --instance-id)
+export ETH_VERSION=$(eth -V)
 
 # add node service
 cd ~/bin
