@@ -68,6 +68,6 @@ cd www
 sudo npm install pm2 -g
 sudo npm install
 
-pm2 start processes.json
-pm2 startup ubuntu
-pm3 save
+# pm2 start processes.json
+# pm2 startup ubuntu
+# pm3 save
