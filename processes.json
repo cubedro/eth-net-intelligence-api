@@ -1,7 +1,7 @@
 [
 	{
 		"name"				: "eth",
-		"script"			: "./bin/eth",
+		"script"			: "./bin/eth.sh",
 		"log_file"			: "/home/ubuntu/logs/eth-log.log",
 		"out_file"			: "/home/ubuntu/logs/eth-out.log",
 		"error_file"		: "/home/ubuntu/logs/eth-err.log",
