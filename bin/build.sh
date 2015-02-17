@@ -48,13 +48,14 @@ sudo apt-get -y install cloud-utils
 
 # add node service
 cd ~/bin
+
+export EC2_INSTANCE_ID=$(ec2metadata --instance-id)
+export ETH_VERSION=$(./eth -V)
+
 [ ! -d "www" ] && git clone https://github.com/cubedro/eth-net-intelligence-api www
 cd www
 sudo npm install
 sudo npm install pm2 -g
-
-export EC2_INSTANCE_ID=$(ec2metadata --instance-id)
-export ETH_VERSION=$(eth -V)
 
 # pm2 start processes.json
 # pm2 startup ubuntu
