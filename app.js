@@ -10,7 +10,7 @@ var gracefulShutdown = function() {
 
     setTimeout(function(){
         console.log("Closed out remaining connections.");
-        process.exit()
+        process.exit(0)
     }, 2*1000);
 }
 
@@ -20,5 +20,9 @@ process.on('SIGTERM', gracefulShutdown);
 // listen for INT signal e.g. Ctrl-C
 process.on('SIGINT', gracefulShutdown);
 
+process.on('message', function(msg) {
+	if (msg == 'shutdown')
+		gracefulShutdown();
+});
 
 module.exports = node;
