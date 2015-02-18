@@ -25,7 +25,7 @@
 			"NODE_ENV"		: "production",
 			"RPC_HOST"		: "localhost",
 			"RPC_PORT"		: "8080",
-			"WS_SERVER"		: "wss://eth-netstats-dev.herokuapp.com",
+			"WS_SERVER"		: "wss://eth-netstats.herokuapp.com",
 		}
 	}
 ]
