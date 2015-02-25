@@ -8,7 +8,7 @@
     "lib": "./lib"
   },
   "dependencies": {
-    "debug": "~2.0.0",
+    "debug": "~2.1.1",
     "ethereum.js": "*",
     "lodash": "^3.2.0",
     "primus": "^2.4.12",
