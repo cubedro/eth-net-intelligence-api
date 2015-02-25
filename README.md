@@ -6,3 +6,10 @@ Deploy on AWS, install dependencies, build eth, clone eth-net-intelligence-api a
 ```
 curl https://raw.githubusercontent.com/cubedro/eth-net-intelligence-api/master/bin/build.sh | sh
 ```
+
+Run it using pm2:
+
+```
+cd ~/bin/www
+pm2 start processes.json
+```
