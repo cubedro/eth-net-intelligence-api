@@ -32,13 +32,13 @@ pm2 start processes.json
 Configure the app in [processes.json](/eth-net-intelligence-api/blob/master/processes.json)
 
 ```
-	"env":
-		{
-			"NODE_ENV"	: "production", // tell the client we're in production environment
-			"RPC_HOST"	: "localhost", // eth JSON-RPC host
-			"RPC_PORT"	: "8080", // eth JSON-RPC port
-			"WS_SERVER"	: "", // path to eth-netstats WebSockets api server
-		}
+"env":
+	{
+		"NODE_ENV"	: "production", // tell the client we're in production environment
+		"RPC_HOST"	: "localhost", // eth JSON-RPC host
+		"RPC_PORT"	: "8080", // eth JSON-RPC port
+		"WS_SERVER"	: "", // path to eth-netstats WebSockets api server
+	}
 ```
 
 [travis-image]: https://travis-ci.org/cubedro/eth-net-intelligence-api.svg
