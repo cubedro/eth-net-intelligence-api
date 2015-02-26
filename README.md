@@ -18,18 +18,9 @@ Fetch and run the build shell. This will install everything you need: latest cpp
 curl https://raw.githubusercontent.com/cubedro/eth-net-intelligence-api/master/bin/build.sh | sh
 ```
 
-## Run
-
-Run it using pm2:
-
-```
-cd ~/bin/www
-pm2 start processes.json
-```
-
 ## Configuration
 
-Configure the app in [processes.json](/eth-net-intelligence-api/blob/master/processes.json)
+Configure the app modifying [processes.json](/eth-net-intelligence-api/blob/master/processes.json). Note that you have to modify the backup processes.json file located in `./bin/processes.json` (to allow you to set your env vars without being rewritten when updating).
 
 ```
 "env":
@@ -38,7 +29,31 @@ Configure the app in [processes.json](/eth-net-intelligence-api/blob/master/proc
 		"RPC_HOST"	: "localhost", // eth JSON-RPC host
 		"RPC_PORT"	: "8080", // eth JSON-RPC port
 		"WS_SERVER"	: "", // path to eth-netstats WebSockets api server
+		"WS_SECRET"	: "", // WebSockets api server secret used for login
 	}
+```
+
+## Run
+
+Run it using pm2:
+
+```
+cd ~/bin
+pm2 start processes.json
+```
+
+## Updating
+
+To update the API client use the following commands:
+
+```
+pm2 kill
+cd ~/bin/www
+git pull
+sudo npm update
+sudo npm install
+cd ..
+pm2 start processes.json
 ```
 
 [travis-image]: https://travis-ci.org/cubedro/eth-net-intelligence-api.svg

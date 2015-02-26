@@ -54,4 +54,4 @@ cd www
 sudo npm install
 sudo npm install pm2 -g
 
-pm2 start processes.json
+cp -b ./processes.json ./..
