@@ -42,6 +42,20 @@ cd ~/bin
 pm2 start processes.json
 ```
 
+## Updating
+
+To update the API client use the following commands:
+
+```
+pm2 kill
+cd ~/bin/www
+git pull
+sudo npm update
+sudo npm install
+cd ..
+pm2 start processes.json
+```
+
 [travis-image]: https://travis-ci.org/cubedro/eth-net-intelligence-api.svg
 [travis-url]: https://travis-ci.org/cubedro/eth-net-intelligence-api
 [dep-image]: https://david-dm.org/cubedro/eth-net-intelligence-api.svg
