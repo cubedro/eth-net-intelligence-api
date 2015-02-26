@@ -12,7 +12,7 @@ This is the backend service which runs along with the node for tracking the ethe
 
 ## Installation on Ubuntu
 
-Fetch and run the build shell. This will install everything you need: latest eth CLI (develop branch), node.js, npm, pm2.
+Fetch and run the build shell. This will install everything you need: latest cpp-ethereum - CLI (develop branch), node.js, npm, pm2.
 
 ```
 curl https://raw.githubusercontent.com/cubedro/eth-net-intelligence-api/master/bin/build.sh | sh
