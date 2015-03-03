@@ -28,6 +28,7 @@ Configure the app modifying [processes.json](/eth-net-intelligence-api/blob/mast
 		"NODE_ENV"	: "production", // tell the client we're in production environment
 		"RPC_HOST"	: "localhost", // eth JSON-RPC host
 		"RPC_PORT"	: "8080", // eth JSON-RPC port
+		"ETH_IMPLEMENTATION" : "Cpp", // eth implementation ("Cpp" or "Go")
 		"WS_SERVER"	: "", // path to eth-netstats WebSockets api server
 		"WS_SECRET"	: "", // WebSockets api server secret used for login
 	}
