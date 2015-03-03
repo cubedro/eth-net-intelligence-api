@@ -1,8 +1,8 @@
 [
 	{
-		"name"						: "eth",
+		"name"						: "eth-go",
 		"cwd"						: "/home/ubuntu/bin/www/",
-		"script"					: "bin/eth.sh",
+		"script"					: "bin/eth-go.sh",
 		"log_file"					: "/home/ubuntu/logs/eth-log.log",
 		"out_file"					: "/home/ubuntu/logs/eth-out.log",
 		"error_file"				: "/home/ubuntu/logs/eth-err.log",

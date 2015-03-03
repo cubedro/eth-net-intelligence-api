@@ -37,4 +37,4 @@ cd www
 sudo npm install
 sudo npm install pm2 -g
 
-cp -b ./processes.json ./..
+cp -b ./processes-go.json ./../processes.json
