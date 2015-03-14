@@ -21,7 +21,7 @@
 		"error_file"				: "/home/ubuntu/logs/node-app-err.log",
 		"merge_logs"				: true,
 		"watch"						: false,
-		"cron_restart"				: "0 0 * * *",
+		// "cron_restart"				: "0 0 * * *",
 		"exec_interpreter"			: "node",
 		"exec_mode"					: "fork_mode",
 		"env":
