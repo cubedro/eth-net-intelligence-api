@@ -30,6 +30,7 @@
 			"RPC_HOST"				: "localhost",
 			"RPC_PORT"				: "8080",
 			"ETH_IMPLEMENTATION"	: "cpp",
+			"INSTANCE_NAME"			: "",
 			"WS_SERVER"				: "wss://eth-netstats.herokuapp.com",
 			"WS_SECRET"				: "eth-net-stats-has-a-secret",
 		}
