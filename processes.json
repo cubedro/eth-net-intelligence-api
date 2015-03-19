@@ -26,6 +26,7 @@
 		"exec_mode"					: "fork_mode",
 		"env":
 		{
+			"INSTANCE_NAME"			: "",
 			"NODE_ENV"				: "production",
 			"RPC_HOST"				: "localhost",
 			"RPC_PORT"				: "8080",
