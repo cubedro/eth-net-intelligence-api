@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "debug": "~2.1.1",
-    "ethereum.js": "*",
+    "ethereum.js": "0.1.*",
     "lodash": "^3.2.0",
     "primus": "^2.4.12",
     "primus-emit": "^0.1.2",
