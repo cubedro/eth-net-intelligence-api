@@ -1,7 +1,6 @@
 #!/bin/sh
 
 # update repository & install dependencies
-sudo apt-get install -y software-properties-common
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get install -y git mercurial build-essential software-properties-common wget pkg-config libgmp3-dev libreadline6-dev libpcre3-dev libpcre++-dev nodejs npm
