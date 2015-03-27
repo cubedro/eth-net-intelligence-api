@@ -3,13 +3,13 @@ var nodeModel = require('./lib/node');
 var node = new nodeModel();
 
 var gracefulShutdown = function() {
-    console.log("Received kill signal, shutting down gracefully.");
+    console.warn("Received kill signal, shutting down gracefully.");
 
     node.stop();
-    console.log("Closed node watcher");
+    console.info("Closed node watcher");
 
     setTimeout(function(){
-        console.log("Closed out remaining connections.");
+        console.info("Closed out remaining connections.");
         process.exit(0)
     }, 2*1000);
 }
