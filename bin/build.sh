@@ -16,7 +16,7 @@ sudo add-apt-repository -y ppa:ethereum/ethereum-dev
 sudo apt-get -y update
 sudo apt-get -y upgrade
 
-sudo apt-get -y install build-essential g++-4.8 git cmake libboost-all-dev automake unzip libgmp-dev libtool libleveldb-dev yasm libminiupnpc-dev libreadline-dev scons libncurses5-dev libcurl4-openssl-dev wget qtbase5-dev qt5-default qtdeclarative5-dev libqt5webkit5-dev libcryptopp-dev libjson-rpc-cpp-dev libmicrohttpd-dev libjsoncpp-dev libargtable2-dev clang-3.5 lldb-3.5 nodejs npm
+sudo apt-get -y install build-essential g++-4.8 git cmake libboost-all-dev automake unzip libgmp-dev libtool libleveldb-dev yasm libminiupnpc-dev libreadline-dev scons libncurses5-dev libcurl4-openssl-dev wget qtbase5-dev qt5-default qtdeclarative5-dev libqt5webkit5-dev libcryptopp-dev libjson-rpc-cpp-dev libmicrohttpd-dev libjsoncpp-dev libargtable2-dev clang-3.5 lldb-3.5 nodejs npm ntp
 
 # add node symlink
 sudo ln -s /usr/bin/nodejs /usr/bin/node
@@ -55,3 +55,11 @@ npm install
 npm install pm2 -g
 
 cp -b ./processes.json ./..
+# set up time update cronjob
+cat > /etc/cron.hourly/ntpdate << EOF
+#!/bin/sh
+sudo service ntp stop
+sudo ntpdate -s ntp.ubuntu.com
+sudo service ntp start
+EOF
+sudo chmod 755 /etc/cron.hourly/ntpdate
