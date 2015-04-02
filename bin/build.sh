@@ -62,4 +62,5 @@ sudo service ntp stop
 sudo ntpdate -s ntp.ubuntu.com
 sudo service ntp start
 EOF
+
 sudo chmod 755 /etc/cron.hourly/ntpdate

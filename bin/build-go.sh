@@ -6,12 +6,11 @@ sudo apt-get upgrade -y
 sudo apt-get install -y git mercurial build-essential software-properties-common wget pkg-config libgmp3-dev libreadline6-dev libpcre3-dev libpcre++-dev nodejs npm ntp
 
 # add ethereum repos
-sudo add-apt-repository -y ppa:ethereum/ethereum-qt
 sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo add-apt-repository -y ppa:ethereum/ethereum-dev
 sudo apt-get update -y
 
-#install ethereum
+# install ethereum
 sudo apt-get install -y ethereum
 
 # add node symlink
@@ -37,4 +36,5 @@ sudo service ntp stop
 sudo ntpdate -s ntp.ubuntu.com
 sudo service ntp start
 EOF
+
 sudo chmod 755 /etc/cron.hourly/ntpdate
