@@ -1,6 +1,6 @@
 #!/bin/bash
 trap "exit" INT
-if [ -f /usr/bin/ethereum ]
+if [[ ! -f /home/ubuntu/bin/eth ]];
 then
 	geth --rpc true --loglevel 1
 else
