@@ -25,7 +25,7 @@ cd ~/bin
 
 [ ! -d "www" ] && git clone https://github.com/cubedro/eth-net-intelligence-api www
 cd www
-sudo npm install
-sudo npm install pm2 -g
+npm install
+npm install pm2 -g
 
 cp -b ./processes-go.json ./../processes.json
