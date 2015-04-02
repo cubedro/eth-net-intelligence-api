@@ -1,6 +1,6 @@
 #!/bin/bash
 trap "exit" INT
-if [[ ! -f /home/ubuntu/bin/eth ]];
+if [[ -f /usr/bin/geth ]];
 then
 	geth --rpc true --loglevel 1
 else
