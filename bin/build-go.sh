@@ -11,7 +11,7 @@ sudo add-apt-repository -y ppa:ethereum/ethereum-dev
 sudo apt-get update -y
 
 # install ethereum
-sudo apt-get install -y ethereum
+sudo apt-get install -y geth
 
 # add node symlink
 sudo ln -s /usr/bin/nodejs /usr/bin/node

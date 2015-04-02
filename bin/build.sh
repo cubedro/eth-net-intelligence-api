@@ -55,6 +55,7 @@ npm install
 npm install pm2 -g
 
 cp -b ./processes.json ./..
+
 # set up time update cronjob
 cat > /etc/cron.hourly/ntpdate << EOF
 #!/bin/sh
