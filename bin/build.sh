@@ -1,5 +1,19 @@
 #!/bin/sh
 
+echo "You're about to install ethereum. Please choose one of the following:"
+echo "1. eth"
+echo "2. geth"
+while true; do
+    read -p "Choose the implementation: " imp
+    case $imp in
+        [1]* ) ethtype="eth"; break;;
+        [2]* ) ethtype="geth"; break;;
+        * ) echo "Please answer 1 or 2.";;
+    esac
+done
+
+echo "Installing" $ethtype
+
 cd ~
 
 [ ! -d "bin" ] && mkdir bin
@@ -15,12 +29,7 @@ sudo add-apt-repository -y ppa:ethereum/ethereum-dev
 sudo apt-get update -y
 
 # install ethereum & install dependencies
-sudo apt-get install -y software-properties-common build-essential git unzip wget nodejs npm ntp cloud-utils eth
-
-# remove previous eth symlink
-[[ ! -f ~/bin/eth ]] && rm ~/bin/eth
-# add eth symlink
-ln -s  /usr/bin/eth ~/bin/eth
+sudo apt-get install -y software-properties-common build-essential git unzip wget nodejs npm ntp cloud-utils $ethtype
 
 # add node symlink if it doesn't exist
 [[ ! -f /usr/bin/node ]] && sudo ln -s /usr/bin/nodejs /usr/bin/node
