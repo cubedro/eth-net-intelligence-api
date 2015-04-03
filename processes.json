@@ -1,36 +1,37 @@
 [
-	{
-		"name"						: "eth",
-		"cwd"						: "~/bin/www/",
-		"script"						: "bin/eth.sh",
-		"log_date_format"				: "YYYY-MM-DD HH:mm Z",
-		"log_file"					: "~/logs/eth-log.log",
-		"out_file"					: "~/logs/eth-out.log",
-		"error_file"					: "~/logs/eth-err.log",
-		"merge_logs"					: false,
-		"watch"						: false,
-		"exec_interpreter"				: "bash",
-		"exec_mode"					: "fork_mode"
-	},
-	{
-		"name"						: "node-app",
-		"cwd"						: "~/bin/www/",
-		"script"						: "app.js",
-		"log_file"					: "~/logs/node-app-log.log",
-		"out_file"					: "~/logs/node-app-out.log",
-		"error_file"					: "~/logs/node-app-err.log",
-		"merge_logs"					: false,
-		"watch"						: false,
-		"exec_interpreter"				: "node",
-		"exec_mode"					: "fork_mode",
-		"env":
-		{
-			"NODE_ENV"				: "production",
-			"RPC_HOST"				: "localhost",
-			"RPC_PORT"				: "8080",
-			"INSTANCE_NAME"			: "",
-			"WS_SERVER"				: "wss://eth-netstats.herokuapp.com",
-			"WS_SECRET"				: "eth-net-stats-has-a-secret",
-		}
-	}
+  {
+    "name"              : "eth",
+    "cwd"               : "~/bin/www/",
+    "script"            : "bin/eth.sh",
+    "log_date_format"   : "YYYY-MM-DD HH:mm Z",
+    "log_file"          : "~/logs/eth-log.log",
+    "out_file"          : "~/logs/eth-out.log",
+    "error_file"        : "~/logs/eth-err.log",
+    "merge_logs"        : false,
+    "watch"             : false,
+    "exec_interpreter"  : "bash",
+    "exec_mode"         : "fork_mode"
+  },
+  {
+    "name"              : "node-app",
+    "cwd"               : "~/bin/www/",
+    "script"            : "app.js",
+    "log_date_format"   : "YYYY-MM-DD HH:mm Z",
+    "log_file"          : "~/logs/node-app-log.log",
+    "out_file"          : "~/logs/node-app-out.log",
+    "error_file"        : "~/logs/node-app-err.log",
+    "merge_logs"        : false,
+    "watch"             : false,
+    "exec_interpreter"  : "node",
+    "exec_mode"         : "fork_mode",
+    "env":
+    {
+      "NODE_ENV"        : "production",
+      "RPC_HOST"        : "localhost",
+      "RPC_PORT"        : "8080",
+      "INSTANCE_NAME"   : "",
+      "WS_SERVER"       : "wss://eth-netstats.herokuapp.com",
+      "WS_SECRET"       : "eth-net-stats-has-a-secret",
+    }
+  }
 ]
