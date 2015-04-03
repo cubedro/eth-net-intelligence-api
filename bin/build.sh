@@ -46,11 +46,11 @@ sudo npm install pm2 -g
 [[ ! -f ~/bin/processes.json ]] && cp -b ./processes.json ./..
 
 # set up time update cronjob
-cat > /etc/cron.hourly/ntpdate << EOF
+sudo bash -c "cat > /etc/cron.hourly/ntpdate << EOF
 #!/bin/sh
 sudo service ntp stop
 sudo ntpdate -s ntp.ubuntu.com
 sudo service ntp start
-EOF
+EOF"
 
 sudo chmod 755 /etc/cron.hourly/ntpdate
