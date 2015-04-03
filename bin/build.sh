@@ -6,7 +6,6 @@ cd ~
 sudo apt-get -y update
 sudo apt-get -y install language-pack-en-base
 sudo dpkg-reconfigure locales
-sudo apt-get -y install software-properties-common
 wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key | sudo apt-key add -
 sudo add-apt-repository "deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-3.5-binaries main"
 
@@ -16,7 +15,7 @@ sudo add-apt-repository -y ppa:ethereum/ethereum-dev
 sudo apt-get -y update
 sudo apt-get -y upgrade
 
-sudo apt-get -y install build-essential g++-4.8 git cmake libboost-all-dev automake unzip libgmp-dev libtool libleveldb-dev yasm libminiupnpc-dev libreadline-dev scons libncurses5-dev libcurl4-openssl-dev wget qtbase5-dev qt5-default qtdeclarative5-dev libqt5webkit5-dev libcryptopp-dev libjson-rpc-cpp-dev libmicrohttpd-dev libjsoncpp-dev libargtable2-dev clang-3.5 lldb-3.5 nodejs npm ntp
+sudo apt-get -y install software-properties-common build-essential g++-4.8 git cmake libboost-all-dev automake unzip libgmp-dev libtool libleveldb-dev yasm libminiupnpc-dev libreadline-dev scons libncurses5-dev libcurl4-openssl-dev wget qtbase5-dev qt5-default qtdeclarative5-dev libqt5webkit5-dev libcryptopp-dev libjson-rpc-cpp-dev libmicrohttpd-dev libjsoncpp-dev libargtable2-dev clang-3.5 lldb-3.5 nodejs npm ntp
 
 # add node symlink
 sudo ln -s /usr/bin/nodejs /usr/bin/node
