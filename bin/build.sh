@@ -2,7 +2,6 @@
 
 cd ~
 
-
 mkdir bin
 mkdir logs
 
