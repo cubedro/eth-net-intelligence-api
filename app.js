@@ -1,7 +1,7 @@
 var nodeModel = require('./lib/node');
 var sleep = require('sleep');
 
-sleep.sleep(5);
+sleep.sleep(15);
 
 var node = new nodeModel();
 
