@@ -1,33 +1,40 @@
 #!/bin/sh
 
-# update repository & install dependencies
+cd ~
+
+[ ! -d "bin" ] && mkdir bin
+[ ! -d "logs" ] && mkdir logs
+
+# update packages
 sudo apt-get update -y
 sudo apt-get upgrade -y
-sudo apt-get install -y git mercurial build-essential software-properties-common wget pkg-config libgmp3-dev libreadline6-dev libpcre3-dev libpcre++-dev nodejs npm ntp
 
 # add ethereum repos
 sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo add-apt-repository -y ppa:ethereum/ethereum-dev
 sudo apt-get update -y
 
-# install ethereum
-sudo apt-get install -y geth
+# install ethereum & install dependencies
+sudo apt-get install -y software-properties-common build-essential git unzip wget nodejs npm ntp cloud-utils geth
 
-# add node symlink
-sudo ln -s /usr/bin/nodejs /usr/bin/node
+# remove previous eth symlink
+[[ ! -f ~/bin/geth ]] && rm ~/bin/geth
+# add eth symlink
+ln -s  /usr/bin/geth ~/bin/geth
 
-# install cloud-utils to fetch instance meta-data
-sudo apt-get -y install cloud-utils
+# add node symlink if it doesn't exist
+[[ ! -f /usr/bin/node ]] && sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 # add node service
 cd ~/bin
 
 [ ! -d "www" ] && git clone https://github.com/cubedro/eth-net-intelligence-api www
 cd www
+git pull
 npm install
 npm install pm2 -g
 
-cp -b ./processes-go.json ./../processes.json
+[[ ! -f ~/bin/processes.json ]] && cp -b ./processes.json ./..
 
 # set up time update cronjob
 cat > /etc/cron.hourly/ntpdate << EOF
