@@ -41,7 +41,7 @@ cd ~/bin
 cd www
 git pull
 npm install
-npm install pm2 -g
+sudo npm install pm2 -g
 
 [[ ! -f ~/bin/processes.json ]] && cp -b ./processes.json ./..
 
