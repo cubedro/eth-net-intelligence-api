@@ -34,17 +34,6 @@ sudo apt-get install -y software-properties-common build-essential git unzip wge
 # add node symlink if it doesn't exist
 [[ ! -f /usr/bin/node ]] && sudo ln -s /usr/bin/nodejs /usr/bin/node
 
-# add node service
-cd ~/bin
-
-[ ! -d "www" ] && git clone https://github.com/cubedro/eth-net-intelligence-api www
-cd www
-git pull
-npm install
-sudo npm install pm2 -g
-
-[[ ! -f ~/bin/processes.json ]] && cp -b ./processes.json ./..
-
 # set up time update cronjob
 sudo bash -c "cat > /etc/cron.hourly/ntpdate << EOF
 #!/bin/sh
@@ -54,3 +43,15 @@ sudo service ntp start
 EOF"
 
 sudo chmod 755 /etc/cron.hourly/ntpdate
+
+# add node service
+cd ~/bin
+
+[ ! -d "www" ] && git clone https://github.com/cubedro/eth-net-intelligence-api www
+cd www
+git pull
+
+[[ ! -f ~/bin/processes.json ]] && cp -b ./processes.json ./..
+
+npm install
+sudo npm install pm2 -g
