@@ -2,7 +2,7 @@
 trap "exit" INT
 if [[ -f /usr/bin/geth ]];
 then
-	geth -rpc -rpcport "8080" -maxpeers "50" -loglevel "1"
+	geth -rpc -rpcport "8080" -maxpeers "20" -loglevel "2"
 else
-	eth -b -x 50 -r 52.5.125.115 -p 30303 -m off -v 0 -j
+	eth -b -x 20 -r 52.5.125.115 -p 30303 -m off -v 1 -j
 fi
