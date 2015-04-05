@@ -22,6 +22,7 @@ cd ~
 # update packages
 sudo apt-get update -y
 sudo apt-get upgrade -y
+sudo apt-get install -y software-properties-common
 
 # add ethereum repos
 sudo add-apt-repository -y ppa:ethereum/ethereum
@@ -29,7 +30,7 @@ sudo add-apt-repository -y ppa:ethereum/ethereum-dev
 sudo apt-get update -y
 
 # install ethereum & install dependencies
-sudo apt-get install -y software-properties-common build-essential git unzip wget nodejs npm ntp cloud-utils $ethtype
+sudo apt-get install -y build-essential git unzip wget nodejs npm ntp cloud-utils $ethtype
 
 # add node symlink if it doesn't exist
 [[ ! -f /usr/bin/node ]] && sudo ln -s /usr/bin/nodejs /usr/bin/node
