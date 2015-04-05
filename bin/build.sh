@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo "You're about to install ethereum. Please choose one of the following:"
 echo "1. eth"
