@@ -47,7 +47,7 @@ heading "Stopping processes"
 pm2 kill
 
 heading "Removing ethereum"
-sudo apt-get remove $eth -y
+sudo apt-get remove -y $ethtype
 
 heading "Updating repos"
 sudo apt-get clean
@@ -57,7 +57,7 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 
 heading "Installing ethereum"
-sudo apt-get install -y $eth
+sudo apt-get install -y $ethtype
 
 heading "Updating eth-netstats client"
 cd ~/bin/www
