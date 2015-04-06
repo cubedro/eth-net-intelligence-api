@@ -1,6 +1,32 @@
-#!/bin/sh
+#!/bin/bash
 
-echo "You're about to install ethereum. Please choose one of the following:"
+# setup colors
+red=`tput setaf 1`
+green=`tput setaf 2`
+cyan=`tput setaf 6`
+bold=`tput bold`
+reset=`tput sgr0`
+
+heading()
+{
+	echo
+	echo "${cyan}==>${reset}${bold} $1${reset}"
+}
+
+success()
+{
+	echo
+	echo "${green}==>${bold} $1${reset}"
+}
+
+error()
+{
+	echo
+	echo "${red}==>${bold} Error: $1${reset}"
+}
+
+heading "You're about to install ethereum."
+echo "Please choose one of the following:"
 echo "1. eth"
 echo "2. geth"
 while true; do
@@ -12,7 +38,7 @@ while true; do
     esac
 done
 
-echo "Installing" $ethtype
+heading "Installing" $ethtype
 
 cd ~
 
@@ -52,7 +78,7 @@ cd ~/bin
 cd www
 git pull
 
-[[ ! -f ~/bin/processes.json ]] && cp -b ./processes.json ./..
+[[ ! -f ~/bin/processes.json ]] && cp -b ./processes-ec2.json ./../processes.json
 
 npm install
 sudo npm install pm2 -g
