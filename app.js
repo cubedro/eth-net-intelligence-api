@@ -1,5 +1,5 @@
 var sleep = require('sleep');
-// sleep.sleep(15);
+sleep.sleep(15);
 
 var nodeModel = require('./lib/node');
 
