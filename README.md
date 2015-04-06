@@ -5,16 +5,16 @@ Ethereum Network Intelligence API
 This is the backend service which runs along with the node for tracking the ethereum network status, fetches information through the JSON-RPC and connects through WebSockets to [eth-netstats](https://github.com/cubedro/eth-netstats) and feed information constantly.
 
 ## Prerequisite
-* cpp-ethereum
+* eth or geth
 * node
 * npm
 
 
 ## Installation on Ubuntu
 
-Fetch and run the build shell. This will install everything you need: latest cpp-ethereum - CLI (develop branch), node.js, npm, pm2.
+Fetch and run the build shell. This will install everything you need: latest ethereum - CLI from develop branch (you can choose between eth or geth), node.js, npm & pm2.
 
-```
+```bash
 bash <(curl https://raw.githubusercontent.com/cubedro/eth-net-intelligence-api/master/bin/build.sh)
 ```
 
@@ -22,15 +22,15 @@ bash <(curl https://raw.githubusercontent.com/cubedro/eth-net-intelligence-api/m
 
 Configure the app modifying [processes.json](/eth-net-intelligence-api/blob/master/processes.json). Note that you have to modify the backup processes.json file located in `./bin/processes.json` (to allow you to set your env vars without being rewritten when updating).
 
-```
+```json
 "env":
 	{
-		"NODE_ENV"	: "production", // tell the client we're in production environment
-		"RPC_HOST"	: "localhost", // eth JSON-RPC host
-		"RPC_PORT"	: "8080", // eth JSON-RPC port
-		"INSTANCE_NAME"	     : "",
-		"WS_SERVER"	: "", // path to eth-netstats WebSockets api server
-		"WS_SECRET"	: "", // WebSockets api server secret used for login
+		"NODE_ENV"        : "production", // tell the client we're in production environment
+		"RPC_HOST"        : "localhost", // eth JSON-RPC host
+		"RPC_PORT"        : "8080", // eth JSON-RPC port
+		"INSTANCE_NAME"   : "",
+		"WS_SERVER"       : "", // path to eth-netstats WebSockets api server
+		"WS_SECRET"       : "", // WebSockets api server secret used for login
 	}
 ```
 
@@ -38,7 +38,7 @@ Configure the app modifying [processes.json](/eth-net-intelligence-api/blob/mast
 
 Run it using pm2:
 
-```
+```bash
 cd ~/bin
 pm2 start processes.json
 ```
@@ -47,7 +47,7 @@ pm2 start processes.json
 
 To update the API client use the following commands:
 
-```
+```bash
 pm2 kill
 cd ~/bin/www
 git pull
