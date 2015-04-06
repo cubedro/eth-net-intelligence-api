@@ -33,7 +33,7 @@ then
 	ethtype="geth"
 	success "Found geth"
 else
-	if [[ -f /usr/bin/geth ]];
+	if [[ -f /usr/bin/eth ]];
 	then
 		ethtype="eth"
 		success "Found eth"
