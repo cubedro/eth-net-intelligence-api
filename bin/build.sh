@@ -78,7 +78,7 @@ cd ~/bin
 cd www
 git pull
 
-[[ ! -f ~/bin/processes.json ]] && cp -b ./processes.json ./..
+[[ ! -f ~/bin/processes.json ]] && cp -b ./processes-ec2.json ./../processes.json
 
 npm install
 sudo npm install pm2 -g

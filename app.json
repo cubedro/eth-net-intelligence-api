@@ -1,0 +1,21 @@
+[
+  {
+    "name"              : "node-app",
+    "cwd"               : "/home/ubuntu/bin/www/",
+    "script"            : "app.js",
+    "log_date_format"   : "YYYY-MM-DD HH:mm Z",
+    "merge_logs"        : false,
+    "watch"             : false,
+    "exec_interpreter"  : "node",
+    "exec_mode"         : "fork_mode",
+    "env":
+    {
+      "NODE_ENV"        : "production",
+      "RPC_HOST"        : "localhost",
+      "RPC_PORT"        : "8080",
+      "INSTANCE_NAME"   : "",
+      "WS_SERVER"       : "wss://eth-netstats.herokuapp.com",
+      "WS_SECRET"       : "eth-net-stats-has-a-secret",
+    }
+  }
+]
