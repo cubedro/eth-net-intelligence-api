@@ -28,8 +28,8 @@ Configure the app modifying [processes.json](/eth-net-intelligence-api/blob/mast
 		"NODE_ENV"        : "production", // tell the client we're in production environment
 		"RPC_HOST"        : "localhost", // eth JSON-RPC host
 		"RPC_PORT"        : "8080", // eth JSON-RPC port
-		"INSTANCE_NAME"   : "",
-		"WS_SERVER"       : "", // path to eth-netstats WebSockets api server
+		"INSTANCE_NAME"   : "", // whatever you wish to name your node
+		"WS_SERVER"       : "wss://eth-netstats.herokuapp.com", // path to eth-netstats WebSockets api server
 		"WS_SECRET"       : "", // WebSockets api server secret used for login
 	}
 ```
@@ -45,17 +45,13 @@ pm2 start processes.json
 
 ## Updating
 
-To update the API client use the following commands:
+To update the API client use the following command:
 
 ```bash
-pm2 kill
-cd ~/bin/www
-git pull
-sudo npm update
-sudo npm install
-cd ..
-pm2 start processes.json
+~/bin/www/bin/update.sh
 ```
+
+It will stop the current netstats client processes, automatically detect your ethereum implementation and version, update it to the latest develop build, update netstats client and reload the processes.
 
 [travis-image]: https://travis-ci.org/cubedro/eth-net-intelligence-api.svg
 [travis-url]: https://travis-ci.org/cubedro/eth-net-intelligence-api
