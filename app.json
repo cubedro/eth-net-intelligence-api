@@ -12,7 +12,9 @@
       "NODE_ENV"        : "production",
       "RPC_HOST"        : "localhost",
       "RPC_PORT"        : "8080",
+      "LISTENING_PORT"  : "30303",
       "INSTANCE_NAME"   : "",
+      "CONTACT_DETAILS" : "",
       "WS_SERVER"       : "wss://eth-netstats.herokuapp.com",
       "WS_SECRET"       : "eth-net-stats-has-a-secret",
     }
