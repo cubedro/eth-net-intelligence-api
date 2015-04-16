@@ -1,5 +1,7 @@
 var sleep = require('sleep');
-sleep.sleep(15);
+
+if(process.env.NODE_ENV === 'production')
+	sleep.sleep(15);
 
 var nodeModel = require('./lib/node');
 
