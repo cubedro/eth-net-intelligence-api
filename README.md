@@ -5,7 +5,7 @@ Ethereum Network Intelligence API
 This is the backend service which runs along with the node for tracking the ethereum network status, fetches information through the JSON-RPC and connects through WebSockets to [eth-netstats](https://github.com/cubedro/eth-netstats) and feed information constantly.
 
 ## Prerequisite
-* eth or geth
+* eth, geth or pyethapp
 * node
 * npm
 
@@ -17,6 +17,10 @@ Fetch and run the build shell. This will install everything you need: latest eth
 ```bash
 bash <(curl https://raw.githubusercontent.com/cubedro/eth-net-intelligence-api/master/bin/build.sh)
 ```
+## Installation as docker container (optional)
+
+There is a `Dockerfile` in the root directory of the repository. Please read through the header of said file for
+instructions on how to build/run/setup. Configuration instructions below still apply.
 
 ## Configuration
 
