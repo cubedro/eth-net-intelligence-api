@@ -15,8 +15,8 @@ var gracefulShutdown = function() {
 
     setTimeout(function(){
         console.info("Closed out remaining connections.");
-        process.exit(0)
-    }, 2*1000);
+        process.exit(0);
+    }, 5*1000);
 }
 
 // listen for TERM signal .e.g. kill
