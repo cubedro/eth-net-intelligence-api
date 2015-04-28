@@ -1,7 +1,7 @@
 {
   "name": "eth-net-intelligence-api",
   "description": "Ethereum Network Intelligence API",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "private": true,
   "main": "./app.js",
   "directories": {
@@ -16,7 +16,7 @@
     "primus-spark-latency": "0.1.1",
     "shelljs": "0.4.0",
     "sleep": "2.0.0",
-    "web3": "0.3.2",
+    "web3": "0.3.3",
     "ws": "0.7.1"
   },
   "scripts": {
