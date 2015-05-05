@@ -5,13 +5,14 @@ var nodeModel = require('./lib/node');
 var node = new nodeModel();
 
 var gracefulShutdown = function() {
-    console.warn("Received kill signal, shutting down gracefully.");
+	console.log('');
+    console.error("xxx", "sys", "Received kill signal, shutting down gracefully.");
 
     node.stop();
-    console.info("Closed node watcher");
+    console.info("xxx", "sys", "Closed node watcher");
 
     setTimeout(function(){
-        console.info("Closed out remaining connections.");
+        console.info("xxx", "sys", "Closed out remaining connections.");
         process.exit(0);
     }, 5*1000);
 }
