@@ -8,6 +8,7 @@
     "lib": "./lib"
   },
   "dependencies": {
+    "async": "^0.9.0",
     "debounce": "1.0.0",
     "debug": "2.1.3",
     "lodash": "3.7.0",
