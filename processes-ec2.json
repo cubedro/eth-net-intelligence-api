@@ -32,7 +32,7 @@
       "LISTENING_PORT"  : "30303",
       "INSTANCE_NAME"   : "",
       "CONTACT_DETAILS" : "",
-      "WS_SERVER"       : "wss://eth-netstats.herokuapp.com",
+      "WS_SERVER"       : "wss://stats.ethdev.com",
       "WS_SECRET"       : "eth-net-stats-has-a-secret",
     }
   }
