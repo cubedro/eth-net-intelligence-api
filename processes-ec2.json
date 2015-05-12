@@ -3,6 +3,7 @@
     "name"              : "eth",
     "cwd"               : "/home/ubuntu/bin/www/",
     "script"            : "bin/eth.sh",
+    "args"              : "ethpassword",
     "log_date_format"   : "YYYY-MM-DD HH:mm Z",
     "log_file"          : "/home/ubuntu/logs/eth-log.log",
     "out_file"          : "/home/ubuntu/logs/eth-out.log",
