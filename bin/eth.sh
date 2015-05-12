@@ -5,15 +5,14 @@ trap "exit" INT
 if [[ -f $(which ec2metadata 2>/dev/null) ]]
 then
 	# If ec2 instance then get ips from ec2metadata
-	LOCALIP=$(ec2metadata --local-ipv4)
+	# LOCALIP=$(ec2metadata --local-ipv4)
 	IP=$(ec2metadata --public-ipv4)
 else
 	# Else get IPs from ifconfig and dig
-	LOCALIP=$(ifconfig | grep 'inet ' | grep -v '127.0.0.1' | head -n1 | awk '{print $2}' | cut -d':' -f2)
+	# LOCALIP=$(ifconfig | grep 'inet ' | grep -v '127.0.0.1' | head -n1 | awk '{print $2}' | cut -d':' -f2)
 	IP=$(dig +short myip.opendns.com @resolver1.opendns.com)
 fi
 
-echo "Local IP: $LOCALIP"
 echo "Public IP: $IP"
 
 if [[ -f $(which geth 2>/dev/null) ]]
@@ -24,8 +23,8 @@ then
 elif [[ -f $(which eth 2>/dev/null) ]]
 then
 	echo "Starting eth"
-	echo eth --bootstrap --peers 50 --remote 52.16.188.185:30303 --mining off --json-rpc -v 5 --public-ip $IP --listen-ip $LOCALIP
-	eth --bootstrap --peers 50 --remote 52.16.188.185:30303 --mining off --json-rpc -v 5 --public-ip $IP --listen-ip $LOCALIP
+	echo eth --bootstrap --peers 50 --remote 52.16.188.185:30303 --mining off --json-rpc -v 5 --public-ip $IP
+	eth --bootstrap --peers 50 --remote 52.16.188.185:30303 --mining off --json-rpc -v 5 --public-ip $IP
 else
 	echo "Ethereum was not found!"
 	exit 1;
