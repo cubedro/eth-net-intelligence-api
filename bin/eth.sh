@@ -13,12 +13,19 @@ else
 	IP=$(dig +short myip.opendns.com @resolver1.opendns.com)
 fi
 
+echo "Local IP: $LOCALIP"
+echo "Public IP: $IP"
+
 if [[ -f $(which geth 2>/dev/null) ]]
 then
+	echo "Starting geth"
+	echo geth -rpc -maxpeers "50" -verbosity "3" -bootnodes "enode://09fbeec0d047e9a37e63f60f8618aa9df0e49271f3fadb2c070dc09e2099b95827b63a8b837c6fd01d0802d457dd83e3bd48bd3e6509f8209ed90dabbc30e3d3@52.16.188.185:30303" -nat "extip:$IP"
 	geth -rpc -maxpeers "50" -verbosity "3" -bootnodes "enode://09fbeec0d047e9a37e63f60f8618aa9df0e49271f3fadb2c070dc09e2099b95827b63a8b837c6fd01d0802d457dd83e3bd48bd3e6509f8209ed90dabbc30e3d3@52.16.188.185:30303" -nat "extip:$IP"
 elif [[ -f $(which eth 2>/dev/null) ]]
 then
-	eth --bootstrap --peers 50 --remote 52.16.188.185:30303 --mining off --json-rpc --listen-ip $LOCALIP -v 5
+	echo "Starting eth"
+	echo eth --bootstrap --peers 50 --remote 52.16.188.185:30303 --mining off --json-rpc -v 5 --public-ip $IP --listen-ip $LOCALIP
+	eth --bootstrap --peers 50 --remote 52.16.188.185:30303 --mining off --json-rpc -v 5 --public-ip $IP --listen-ip $LOCALIP
 else
 	echo "Ethereum was not found!"
 	exit 1;
