@@ -43,6 +43,10 @@ else
 	fi
 fi
 
+heading "Flushing logs"
+pm2 flush
+rm -Rf ~/logs/*
+
 heading "Stopping processes"
 pm2 kill
 
