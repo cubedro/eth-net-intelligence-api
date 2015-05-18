@@ -50,6 +50,10 @@ rm -Rf ~/logs/*
 heading "Stopping processes"
 pm2 kill
 
+heading "Killing remaining node processes"
+echo `ps auxww | grep node | awk '{print $2}'`
+kill -9 `ps auxww | grep node | awk '{print $2}'`
+
 heading "Removing ethereum"
 sudo apt-get remove -y $ethtype
 
