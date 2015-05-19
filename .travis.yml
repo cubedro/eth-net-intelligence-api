@@ -5,9 +5,9 @@ env:
   global:
     - secure: Qdkmi13nqcXskABBhbuGZmRakh4orOW1dalkSCyUbzGuYf0OdYF8ttNVuJa0WSWI4KhNXhtz2p3I8dM95wL++LCVqXFmIvZtX8Nca36KlNxIPNXPjn0odayh+c4pgrhrbz8TDmDXl9IPuZmNz8HHtN7xmIn6YDcm13wA3gTmfwo=
     - RPC_HOST=localhost
-    - RPC_PORT=8080
+    - RPC_PORT=8545
     - LISTENING_PORT=30303
     - INSTANCE_NAME="Travis Node"
     - CONTACT_DETAILS="marian@ethdev.com"
-    - WS_SERVER="wss://eth-netstats.herokuapp.com"
+    - WS_SERVER="wss://stats.ethdev.com"
     - NODE_ENV="production"
