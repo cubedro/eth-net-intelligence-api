@@ -1,7 +1,7 @@
 {
   "name": "eth-net-intelligence-api",
   "description": "Ethereum Network Intelligence API",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "private": true,
   "main": "./app.js",
   "directories": {
