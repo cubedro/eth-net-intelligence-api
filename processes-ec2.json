@@ -10,6 +10,7 @@
     "error_file"        : "/home/ubuntu/logs/eth-err.log",
     "merge_logs"        : false,
     "watch"             : false,
+    "max_restarts"      : 10,
     "exec_interpreter"  : "bash",
     "exec_mode"         : "fork_mode"
   },
@@ -23,6 +24,7 @@
     "error_file"        : "/home/ubuntu/logs/node-app-err.log",
     "merge_logs"        : false,
     "watch"             : false,
+    "max_restarts"      : 10,
     "exec_interpreter"  : "node",
     "exec_mode"         : "fork_mode",
     "env":
