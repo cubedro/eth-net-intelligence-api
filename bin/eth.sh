@@ -24,8 +24,8 @@ then
 elif [[ -f $(which eth 2>/dev/null) ]]
 then
 	echo "Starting eth"
-	echo eth --bootstrap --peers 50 --remote 52.16.188.185:30303 --mining off --json-rpc -v 5 --public-ip $IP --listen-ip $LOCALIP --master $1
-	eth --bootstrap --peers 50 --remote 52.16.188.185:30303 --mining off --json-rpc -v 5 --public-ip $IP --listen-ip $LOCALIP --master $1
+	echo eth --bootstrap --peers 50 --remote 52.16.188.185:30303 --mining off --json-rpc -v 3 --public-ip $IP --listen-ip $LOCALIP --master $1
+	eth --bootstrap --peers 50 --remote 52.16.188.185:30303 --mining off --json-rpc -v 3 --public-ip $IP --listen-ip $LOCALIP --master $1
 else
 	echo "Ethereum was not found!"
 	exit 1;
