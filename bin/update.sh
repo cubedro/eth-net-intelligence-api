@@ -46,6 +46,7 @@ fi
 heading "Flushing logs"
 pm2 flush
 rm -Rf ~/logs/*
+rm -rf ~/.local/share/Trash/*
 
 heading "Stopping processes"
 pm2 kill
