@@ -64,6 +64,7 @@ sudo apt-get install -y build-essential git unzip wget nodejs npm ntp cloud-util
 # set up time update cronjob
 sudo bash -c "cat > /etc/cron.hourly/ntpdate << EOF
 #!/bin/sh
+pm2 flush
 sudo service ntp stop
 sudo ntpdate -s ntp.ubuntu.com
 sudo service ntp start
