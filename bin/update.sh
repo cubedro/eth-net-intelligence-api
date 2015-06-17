@@ -43,12 +43,15 @@ else
 	fi
 fi
 
+heading "Stopping processes"
+pm2 stop all
+
 heading "Flushing logs"
 pm2 flush
 rm -Rf ~/logs/*
 rm -rf ~/.local/share/Trash/*
 
-heading "Stopping processes"
+heading "Stopping pm2"
 pm2 kill
 
 heading "Killing remaining node processes"
