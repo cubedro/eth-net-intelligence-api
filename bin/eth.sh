@@ -19,8 +19,8 @@ echo "Public IP: $IP"
 if [[ -f $(which geth 2>/dev/null) ]]
 then
 	echo "Starting geth"
-	echo geth  --ipcdisable --rpc --maxpeers "50" --verbosity "4" --bootnodes "enode://09fbeec0d047e9a37e63f60f8618aa9df0e49271f3fadb2c070dc09e2099b95827b63a8b837c6fd01d0802d457dd83e3bd48bd3e6509f8209ed90dabbc30e3d3@52.16.188.185:30303" -nat "extip:$IP"
-	geth --ipcdisable --rpc --maxpeers "50" --verbosity "4" --bootnodes "enode://09fbeec0d047e9a37e63f60f8618aa9df0e49271f3fadb2c070dc09e2099b95827b63a8b837c6fd01d0802d457dd83e3bd48bd3e6509f8209ed90dabbc30e3d3@52.16.188.185:30303" -nat "extip:$IP"
+	echo geth  --ipcdisable --rpc --maxpeers "50" --verbosity "4" --bootnodes "enode://09fbeec0d047e9a37e63f60f8618aa9df0e49271f3fadb2c070dc09e2099b95827b63a8b837c6fd01d0802d457dd83e3bd48bd3e6509f8209ed90dabbc30e3d3@52.16.188.185:30303" --nat "extip:$IP"
+	geth --ipcdisable --rpc --maxpeers "50" --verbosity "4" --bootnodes "enode://09fbeec0d047e9a37e63f60f8618aa9df0e49271f3fadb2c070dc09e2099b95827b63a8b837c6fd01d0802d457dd83e3bd48bd3e6509f8209ed90dabbc30e3d3@52.16.188.185:30303" --nat "extip:$IP"
 elif [[ -f $(which eth 2>/dev/null) ]]
 then
 	echo "Starting eth"
