@@ -29,7 +29,8 @@ then
 	echo eth --bootstrap --peers 50 --remote 52.16.188.185:30303 --mining off --json-rpc -v 3 --public-ip $IP --listen-ip $LOCALIP --master $1
 	#eth --bootstrap --peers 50 --remote 52.16.188.185:30303 --mining off --json-rpc -v 3 --public-ip $IP --listen-ip $LOCALIP --master $1
 	# eth --bootstrap --peers 50 --remote 52.16.188.185:30303 --mining off --json-rpc -v 3 --public-ip $IP --master $1
-	eth --bootstrap --remote 52.16.188.185:30303 --mining off --json-rpc -v 3 --public-ip $IP --master $1
+	# eth --bootstrap --remote 52.16.188.185:30303 --mining off --json-rpc -v 3 --public-ip $IP --master $1
+	eth --bootstrap --mining off --json-rpc -v 3 --public-ip $IP --master $1
 else
 	echo "Ethereum was not found!"
 	exit 1;
