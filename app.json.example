@@ -18,6 +18,7 @@
       "CONTACT_DETAILS" : "",
       "WS_SERVER"       : "wss://stats.ethdev.com",
       "WS_SECRET"       : "see http://forum.ethereum.org/discussion/2112/how-to-add-yourself-to-the-stats-dashboard-its-not-automatic",
+      "VERBOSITY"       : 2
     }
   }
 ]
