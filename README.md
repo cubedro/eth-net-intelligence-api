@@ -38,6 +38,7 @@ Configure the app modifying [processes.json](/eth-net-intelligence-api/blob/mast
 		"CONTACT_DETAILS" : "", // add your contact details here if you wish (email/skype)
 		"WS_SERVER"       : "wss://stats.ethdev.com", // path to eth-netstats WebSockets api server
 		"WS_SECRET"       : "see http://forum.ethereum.org/discussion/2112/how-to-add-yourself-to-the-stats-dashboard-its-not-automatic", // WebSockets api server secret used for login
+		"VERBOSITY"       : 2 // Set the verbosity (0 = silent, 1 = error, warn, 2 = error, warn, info, success, 3 = all logs)
 	}
 ```
 
