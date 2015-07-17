@@ -51,7 +51,7 @@ RUN cd /home/ethnetintel &&\
     npm install &&\
     npm install -g pm2
 
-RUN echo '#!/bin/bash\nset-e\n\ncd /home/ethnetintel/eth-net-intelligence-api\n/usr/bin/pm2 start ./app.json\ntail -f \
+RUN echo '#!/bin/bash\nset -e\n\ncd /home/ethnetintel/eth-net-intelligence-api\n/usr/bin/pm2 start ./app.json\ntail -f \
     /home/ethnetintel/.pm2/logs/node-app-out-0.log' > /home/ethnetintel/startscript.sh
 
 RUN chmod +x /home/ethnetintel/startscript.sh &&\
