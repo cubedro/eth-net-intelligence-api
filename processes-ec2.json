@@ -31,7 +31,7 @@
     {
       "NODE_ENV"        : "production",
       "RPC_HOST"        : "localhost",
-      "RPC_PORT"        : "8548",
+      "RPC_PORT"        : "8545",
       "LISTENING_PORT"  : "30303",
       "INSTANCE_NAME"   : "",
       "CONTACT_DETAILS" : "",
