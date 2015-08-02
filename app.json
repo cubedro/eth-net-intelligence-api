@@ -16,6 +16,11 @@
       "LISTENING_PORT"  : "30303",
       "INSTANCE_NAME"   : "",
       "CONTACT_DETAILS" : "",
+      //"HASHFILE"        : "lib/latest.hash",
+      // un-comment the above line to send the contents of lib/latest.hash
+      // as the current hashrate.
+      // eg:
+      // {./ethminer -G -t -3} 2>&1 | xargs -I{} sh -c "echo '{}' | grep hashes | cut -d' ' -f10 > /home/user/eth-net-intelligence-api/lib/latest.hash"
       "WS_SERVER"       : "wss://stats.ethdev.com",
       "WS_SECRET"       : "see http://forum.ethereum.org/discussion/2112/how-to-add-yourself-to-the-stats-dashboard-its-not-automatic",
       "VERBOSITY"       : 2
