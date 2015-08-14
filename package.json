@@ -16,7 +16,7 @@
     "primus": "3.0.2",
     "primus-emit": "0.1.2",
     "primus-spark-latency": "0.1.1",
-    "web3": "0.8.1",
+    "web3": "0.12.2",
     "ws": "0.7.2"
   },
   "scripts": {
