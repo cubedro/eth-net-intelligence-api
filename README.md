@@ -17,6 +17,7 @@ Fetch and run the build shell. This will install everything you need: latest eth
 
 ```bash
 bash <(curl https://raw.githubusercontent.com/cubedro/eth-net-intelligence-api/master/bin/build.sh)
+$ cd eth-net-intelligence-api
 ```
 ## Installation as docker container (optional)
 
@@ -25,8 +26,7 @@ instructions on how to build/run/setup. Configuration instructions below still a
 
 ## Configuration
 
-Configure the app modifying [processes.json](/eth-net-intelligence-api/blob/master/processes.json). Note that you have to modify the backup processes.json file located in `./bin/processes.json` (to allow you to set your env vars without being rewritten when updating).
-
+Configure the app modifying [app.json](/eth-net-intelligence-api/blob/master/app.json). Have a look at [app.json.example]((/eth-net-intelligence-api/blob/master/app.json.example)
 ```json
 "env":
 	{
@@ -47,16 +47,17 @@ Configure the app modifying [processes.json](/eth-net-intelligence-api/blob/mast
 Run it using pm2:
 
 ```bash
-cd ~/bin
-pm2 start processes.json
+cd bin
+pm2 start app.json
 ```
 
 ## Updating
 
 To update the API client use the following command:
 
-```bash
-~/bin/www/bin/update.sh
+```
+$ cd eth-net-intelligence-api//bin/www/bin/
+$ ./update.sh
 ```
 
 It will stop the current netstats client processes, automatically detect your ethereum implementation and version, update it to the latest develop build, update netstats client and reload the processes.
