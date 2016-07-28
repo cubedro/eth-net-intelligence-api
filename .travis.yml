@@ -8,6 +8,6 @@ env:
     - RPC_PORT=8545
     - LISTENING_PORT=30303
     - INSTANCE_NAME="Travis Node"
-    - CONTACT_DETAILS="marian@ethdev.com"
-    - WS_SERVER="wss://rpc.ethstats.net"
+    - CONTACT_DETAILS="Machete3000@users.noreply.github.com"
+    - WS_SERVER="wss://rpc.etcstats.net"
     - NODE_ENV="production"
