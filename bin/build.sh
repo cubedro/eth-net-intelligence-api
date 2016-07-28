@@ -75,7 +75,7 @@ sudo chmod 755 /etc/cron.hourly/ntpdate
 # add node service
 cd ~/bin
 
-[ ! -d "www" ] && git clone https://github.com/cubedro/eth-net-intelligence-api www
+[ ! -d "www" ] && git clone https://github.com/Machete3000/etc-net-intelligence-api www
 cd www
 git pull
 
