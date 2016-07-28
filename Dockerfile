@@ -43,19 +43,19 @@ RUN apt-get update &&\
 RUN apt-get update &&\
     apt-get install -y build-essential
 
-RUN adduser ethnetintel
+RUN adduser etcnetintel
 
-RUN cd /home/ethnetintel &&\
-    git clone https://github.com/cubedro/eth-net-intelligence-api &&\
-    cd eth-net-intelligence-api &&\
+RUN cd /home/etcnetintel &&\
+    git clone https://github.com/Machete3000/etc-net-intelligence-api &&\
+    cd etc-net-intelligence-api &&\
     npm install &&\
     npm install -g pm2
 
-RUN echo '#!/bin/bash\nset -e\n\ncd /home/ethnetintel/eth-net-intelligence-api\n/usr/bin/pm2 start ./app.json\ntail -f \
-    /home/ethnetintel/.pm2/logs/node-app-out-0.log' > /home/ethnetintel/startscript.sh
+RUN echo '#!/bin/bash\nset -e\n\ncd /home/etcnetintel/etc-net-intelligence-api\n/usr/bin/pm2 start ./app.json\ntail -f \
+    /home/etcnetintel/.pm2/logs/node-app-out-0.log' > /home/ethnetintel/startscript.sh
 
-RUN chmod +x /home/ethnetintel/startscript.sh &&\
-    chown -R ethnetintel. /home/ethnetintel
+RUN chmod +x /home/etcnetintel/startscript.sh &&\
+    chown -R etcnetintel. /home/etcnetintel
 
-USER ethnetintel
-ENTRYPOINT ["/home/ethnetintel/startscript.sh"]
+USER etcnetintel
+ENTRYPOINT ["/home/etcnetintel/startscript.sh"]
