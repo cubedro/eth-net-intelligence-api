@@ -71,7 +71,7 @@ sudo apt-get upgrade -y
 heading "Installing ethereum"
 sudo apt-get install -y $ethtype
 
-heading "Updating eth-netstats client"
+heading "Updating etc-netstats client"
 cd ~/bin/www
 git pull
 sudo npm update
