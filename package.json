@@ -1,6 +1,6 @@
 {
-  "name": "eth-net-intelligence-api",
-  "description": "Ethereum Network Intelligence API",
+  "name": "etc-net-intelligence-api",
+  "description": "Ethereum Classic Network Intelligence API",
   "version": "0.1.1",
   "private": true,
   "main": "./app.js",
@@ -24,13 +24,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cubedro/eth-net-intelligence-api.git"
+    "url": "https://github.com/Machete3000/etc-net-intelligence-api.git"
   },
-  "homepage": "https://github.com/cubedro/eth-net-intelligence-api",
+  "homepage": "https://github.com/Machete3000/etc-net-intelligence-api",
   "bugs": {
-    "url": "https://github.com/cubedro/eth-net-intelligence-api/issues"
+    "url": "https://github.com/Machete3000/etc-net-intelligence-api/issues"
   },
   "keywords": [
+    "ethereum classic",
+    "etc",
     "ethereum",
     "network",
     "intelligence",
