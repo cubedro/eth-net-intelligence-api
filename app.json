@@ -16,7 +16,7 @@
       "LISTENING_PORT"  : "30303",
       "INSTANCE_NAME"   : "",
       "CONTACT_DETAILS" : "",
-      "WS_SERVER"       : "wss://rpc.etcstats.net",
+      "WS_SERVER"       : "ws://rpc.etcstats.net",
       "WS_SECRET"       : "TBA",
       "VERBOSITY"       : 2
     }
