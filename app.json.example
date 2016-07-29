@@ -17,7 +17,7 @@
       "INSTANCE_NAME"   : "",
       "CONTACT_DETAILS" : "",
       "WS_SERVER"       : "ws://rpc.etcstats.net",
-      "WS_SECRET"       : "TBA",
+      "WS_SECRET"       : "", // see https://github.com/Machete3000/etc-net-intelligence-api
       "VERBOSITY"       : 2
     }
   }
