@@ -25,7 +25,7 @@ instructions on how to build/run/setup. Configuration instructions below still a
 
 ## Configuration
 
-Configure the app modifying [app.json](/etc-net-intelligence-api/blob/master/app.json). 
+Configure the app modifying [processes.json](/etc-net-intelligence-api/blob/master/processes.json). Note that you have to modify the backup processes.json file located in `./bin/processes.json` (to allow you to set your env vars without being rewritten when updating).
 
 ```json
 "env":
@@ -48,7 +48,7 @@ Run it using pm2:
 
 ```bash
 cd ~/bin
-pm2 start app.json
+pm2 start processes.json
 ```
 
 ## Updating
