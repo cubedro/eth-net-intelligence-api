@@ -1,6 +1,6 @@
 [
   {
-    "name"              : "eth",
+    "name"              : "etc",
     "cwd"               : "/home/ubuntu/bin/www/",
     "script"            : "bin/eth.sh",
     "args"              : "ethpassword",
@@ -35,8 +35,8 @@
       "LISTENING_PORT"  : "30303",
       "INSTANCE_NAME"   : "",
       "CONTACT_DETAILS" : "",
-      "WS_SERVER"       : "wss://rpc.ethstats.net",
-      "WS_SECRET"       : "see http://forum.ethereum.org/discussion/2112/how-to-add-yourself-to-the-stats-dashboard-its-not-automatic",
+      "WS_SERVER"       : "wss://rpc.etcstats.net",
+      "WS_SECRET"       : "TBA",
       "VERBOSITY"       : 2
     }
   }
