@@ -25,7 +25,7 @@ instructions on how to build/run/setup. Configuration instructions below still a
 
 ## Configuration
 
-Configure the app modifying [processes.json](/eth-net-intelligence-api/blob/master/processes.json). Note that you have to modify the backup processes.json file located in `./bin/processes.json` (to allow you to set your env vars without being rewritten when updating).
+Configure the app modifying [processes.json](./processes.json). Note that you have to modify the backup processes.json file located in `./bin/processes.json` (to allow you to set your env vars without being rewritten when updating).
 
 ```json
 "env":
