@@ -29,7 +29,7 @@ Configure the app modifying app.json.
 		"INSTANCE_NAME"   : "", // whatever you wish to name your node
 		"CONTACT_DETAILS" : "", // add your contact details here if you wish (email/skype)
 		"WS_SERVER"       : "wss://ubiq.darcr.us", // path to ubq-netstats WebSockets api server
-		"WS_SECRET"       : "contact xocel or sigwo in the ubiq slack", // WebSockets api server secret used for login
+		"WS_SECRET"       : "contact xocel or sigwo in the ubiq discord", // WebSockets api server secret used for login
 		"VERBOSITY"       : 2 // Set the verbosity (0 = silent, 1 = error, warn, 2 = error, warn, info, success, 3 = all logs)
 	}
 ```
