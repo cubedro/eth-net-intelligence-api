@@ -17,7 +17,7 @@
       "INSTANCE_NAME"   : "",
       "CONTACT_DETAILS" : "",
       "WS_SERVER"       : "wss://ubiq.darcr.us",
-      "WS_SECRET"       : "contact xocel or sigwo in the ubiq slack.",
+      "WS_SECRET"       : "contact xocel or sigwo in the ubiq discord.",
       "VERBOSITY"       : 2
     }
   }
