@@ -1,6 +1,6 @@
 {
-  "name": "eth-net-intelligence-api",
-  "description": "Ethereum Network Intelligence API",
+  "name": "ubiq-net-intelligence-api",
+  "description": "Ubiq Network Intelligence API",
   "version": "0.1.1",
   "private": true,
   "main": "./app.js",
@@ -24,13 +24,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cubedro/eth-net-intelligence-api.git"
+    "url": "https://github.com/ubiq/ubiq-net-intelligence-api.git"
   },
-  "homepage": "https://github.com/cubedro/eth-net-intelligence-api",
+  "homepage": "https://github.com/ubiq/ubiq-net-intelligence-api",
   "bugs": {
-    "url": "https://github.com/cubedro/eth-net-intelligence-api/issues"
+    "url": "https://github.com/ubiq/ubiq-net-intelligence-api/issues"
   },
   "keywords": [
+    "ubiq",
     "ethereum",
     "network",
     "intelligence",

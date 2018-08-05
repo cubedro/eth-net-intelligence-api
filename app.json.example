@@ -12,12 +12,12 @@
     {
       "NODE_ENV"        : "production",
       "RPC_HOST"        : "localhost",
-      "RPC_PORT"        : "8545",
-      "LISTENING_PORT"  : "30303",
+      "RPC_PORT"        : "8588",
+      "LISTENING_PORT"  : "30388",
       "INSTANCE_NAME"   : "",
       "CONTACT_DETAILS" : "",
-      "WS_SERVER"       : "wss://rpc.ethstats.net",
-      "WS_SECRET"       : "see http://forum.ethereum.org/discussion/2112/how-to-add-yourself-to-the-stats-dashboard-its-not-automatic",
+      "WS_SERVER"       : "wss://ubiq.darcr.us",
+      "WS_SECRET"       : "contact xocel or sigwo in the ubiq slack.",
       "VERBOSITY"       : 2
     }
   }
