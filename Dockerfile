@@ -51,7 +51,7 @@ RUN cd /home/etcnetintel &&\
     npm install &&\
     npm install -g pm2
 
-RUN echo '#!/bin/bash\nset -e\n\ncd /home/etcnetintel/etc-net-intelligence-api\n/usr/bin/pm2 start ./app.json\ntail -f \
+RUN echo '#!/bin/bash\nset -e\n\ncd /home/etcnetintel/etc-net-intelligence-api\n/usr/local/lib/node_modules/pm2/bin/pm2 start ./app.json\ntail -f \
     /home/etcnetintel/.pm2/logs/node-app-out-0.log' > /home/etcnetintel/startscript.sh
 
 RUN chmod +x /home/etcnetintel/startscript.sh &&\
