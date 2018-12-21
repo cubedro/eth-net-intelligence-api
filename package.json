@@ -25,7 +25,7 @@
     "debounce": "1.0.0",
     "debug": "4.1.0",
     "lodash": "4.1.0",
-    "primus": "7.3.1",
+    "primus": "7.3.2",
     "primus-emit": "1.0.0",
     "primus-spark-latency": "0.1.1",
     "web3": "0.15.3",
