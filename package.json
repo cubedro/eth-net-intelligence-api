@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/gangnamtestnet/eth-net-intelligence-api",
   "dependencies": {
-    "async": "^1.0.0",
+    "async": "^2.6.1",
     "chalk": "^2.4.1",
     "debounce": "1.0.0",
     "debug": "4.1.0",
