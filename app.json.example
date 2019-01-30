@@ -16,8 +16,8 @@
       "LISTENING_PORT"  : "30303",
       "INSTANCE_NAME"   : "",
       "CONTACT_DETAILS" : "",
-      "WS_SERVER"       : "wss://stats.progtest.net",
-      "WS_SECRET"       : "progpow",
+      "WS_SERVER"       : "ws://boot.gangnam.ethdevops.io",
+      "WS_SECRET"       : "psy",
       "VERBOSITY"       : 2
     }
   }
