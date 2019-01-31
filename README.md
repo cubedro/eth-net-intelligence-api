@@ -24,8 +24,8 @@ Configure the app modifying [processes.json](/eth-net-intelligence-api/blob/mast
 		"LISTENING_PORT"  : "30303", // eth listening port (only used for display)
 		"INSTANCE_NAME"   : "", // whatever you wish to name your node
 		"CONTACT_DETAILS" : "", // add your contact details here if you wish (email/skype)
-		"WS_SERVER"       : "wss://stats.progtest.net", // path to eth-netstats WebSockets api server
-		"WS_SECRET"       : "progpow", // WebSockets api server secret used for login
+		"WS_SERVER"       : "ws://boot.gangnam.ethdevops.io", // path to eth-netstats WebSockets api server
+		"WS_SECRET"       : "psy", // WebSockets api server secret used for login
 		"VERBOSITY"       : 2 // Set the verbosity (0 = silent, 1 = error, warn, 2 = error, warn, info, success, 3 = all logs)
 	}
 ```
