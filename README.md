@@ -39,12 +39,13 @@ cd ~/bin
 pm2 start processes.json
 ```
 
-## Updating
+## Startup
 
-To update the API client use the following command:
+To enable at system startup use the following command:
 
 ```bash
-~/bin/www/bin/update.sh
+pm2 save
+pm2 startup
 ```
 
 It will stop the current netstats client processes, automatically detect your ethereum implementation and version, update it to the latest develop build, update netstats client and reload the processes.
