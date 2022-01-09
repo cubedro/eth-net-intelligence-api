@@ -1,9 +1,10 @@
-Ethereum Network Intelligence API
+Ethereum Network Intelligence API "Classic"
 ============
 [![Build Status][travis-image]][travis-url] [![dependency status][dep-image]][dep-url]
 
-This is the backend service which runs along with ethereum and tracks the network status, fetches information through JSON-RPC and connects through WebSockets to [eth-netstats](https://github.com/cubedro/eth-netstats) to feed information. For full install instructions please read the [wiki](https://github.com/ethereum/wiki/wiki/Network-Status).
+This is the backend service which runs along with ethereum and tracks the network status, fetches information through JSON-RPC and connects through WebSockets to [eth-netstats](https://github.com/ethereum/eth-netstats) (Ethereum Network Stats "Classic") to feed information. 
 
+For full install instructions please read the [wiki](https://github.com/ethereum/wiki/wiki/Network-Status).
 
 ## Prerequisite
 * eth, geth or pyethapp
@@ -16,7 +17,7 @@ This is the backend service which runs along with ethereum and tracks the networ
 Fetch and run the build shell. This will install everything you need: latest ethereum - CLI from develop branch (you can choose between eth or geth), node.js, npm & pm2.
 
 ```bash
-bash <(curl https://raw.githubusercontent.com/cubedro/eth-net-intelligence-api/master/bin/build.sh)
+bash <(curl https://raw.githubusercontent.com/ethereum/eth-net-intelligence-api/master/bin/build.sh)
 ```
 ## Installation as docker container (optional)
 
@@ -25,7 +26,7 @@ instructions on how to build/run/setup. Configuration instructions below still a
 
 ## Configuration
 
-Configure the app modifying [processes.json](/eth-net-intelligence-api/blob/master/processes.json). Note that you have to modify the backup processes.json file located in `./bin/processes.json` (to allow you to set your env vars without being rewritten when updating).
+Configure the app modifying [app.json](/eth-net-intelligence-api/blob/master/app.json) 
 
 ```json
 "env":
@@ -47,9 +48,15 @@ Configure the app modifying [processes.json](/eth-net-intelligence-api/blob/mast
 Run it using pm2:
 
 ```bash
-cd ~/bin
-pm2 start processes.json
+pm2 start app.json
 ```
+
+Then run app.js:
+```bash
+node app.js
+```
+
+Use ctrl+c to stop the process.
 
 ## Updating
 
@@ -60,8 +67,3 @@ To update the API client use the following command:
 ```
 
 It will stop the current netstats client processes, automatically detect your ethereum implementation and version, update it to the latest develop build, update netstats client and reload the processes.
-
-[travis-image]: https://travis-ci.org/cubedro/eth-net-intelligence-api.svg
-[travis-url]: https://travis-ci.org/cubedro/eth-net-intelligence-api
-[dep-image]: https://david-dm.org/cubedro/eth-net-intelligence-api.svg
-[dep-url]: https://david-dm.org/cubedro/eth-net-intelligence-api
